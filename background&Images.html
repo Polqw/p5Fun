@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image:url("KKona.jpeg");
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+      function setup() {
+  // creates canvas with (x, y) //
+        createCanvas(w, h, WEBGL);
+  //WEBGL needed for rotation//
+      }
+
+      function draw() {
+        clear()
+        // clears background to help refresh and not overload //
+        rotateY(mouseX/100);
+        rotateX(mouseY/100);
+        // divide by 100 to make mouse less sensitive//
+        triangle(100, 100, 250, 350, 200, 400);//exists in 3d plan//
+        fill('purple');
+        rect(100, 40000, 2, 1);
+        fill('red');
+        rect(123, 321, (w+h)/2, (w-h)/2)
+        fill('blue');
+        rect(90, 200, 120, 213);
+        fill('green');
+        
+        noStroke();
+      }
+    </script>
+  </body>
+</html>
